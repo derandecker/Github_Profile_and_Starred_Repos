@@ -5,9 +5,10 @@
       <map>
         <entry key="..\:/Users/deran/Desktop/GithubProfileAndStarredRepos/app/src/main/res/layout/activity_main.xml" value="0.32563405797101447" />
         <entry key="..\:/Users/deran/Desktop/GithubProfileAndStarredRepos/app/src/main/res/layout/fragment_home.xml" value="0.32563405797101447" />
-        <entry key="..\:/Users/deran/Desktop/GithubProfileAndStarredRepos/app/src/main/res/layout/fragment_home_screen.xml" value="0.32563405797101447" />
+        <entry key="..\:/Users/deran/Desktop/GithubProfileAndStarredRepos/app/src/main/res/layout/fragment_home_screen.xml" value="0.33" />
         <entry key="..\:/Users/deran/Desktop/GithubProfileAndStarredRepos/app/src/main/res/layout/fragment_individual_starred_repo.xml" value="0.32563405797101447" />
         <entry key="..\:/Users/deran/Desktop/GithubProfileAndStarredRepos/app/src/main/res/layout/fragment_starred_repos.xml" value="0.32563405797101447" />
+        <entry key="..\:/Users/deran/Desktop/GithubProfileAndStarredRepos/app/src/main/res/layout/repo_item.xml" value="0.328804347826087" />
       </map>
     </option>
   </component>

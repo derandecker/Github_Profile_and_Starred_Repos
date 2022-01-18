@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/default_margin"
+        android:onClick="TODO"
+        >
+
+        <TextView
+            android:id="@+id/repo_name"
+            style="@style/TextAppearance.Material3.HeadlineSmall"
+            android:layout_marginTop="@dimen/default_margin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Github_Profile_and_Starred_Repos" />
+
+        <TextView
+            android:id="@+id/repo_description"
+            style="@style/TextAppearance.Material3.BodyLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/repo_name"
+            tools:text="App with multiple screens and Navigation. Shows info from specified user's GitHub Profile, and allows for viewing their list of starred repos and individual info about each one." />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

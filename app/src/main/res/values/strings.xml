@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">Github Profile and Starred Repos</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="username">username</string>
+    <string name="submit_button">Submit</string>
+    <string name="github_profile_picture_content_description">GitHub Profile Picture</string>
+    <string name="show_repos_button">Show Repos</string>
 </resources>
