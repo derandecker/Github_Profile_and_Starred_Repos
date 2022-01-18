@@ -45,7 +45,7 @@
             android:layout_height="@dimen/profile_image_height"
             android:layout_marginTop="32dp"
             android:contentDescription="@string/github_profile_picture_content_description"
-
+            app:profileImage="@{viewModel.profile.avatar_url}"
             app:layout_constraintEnd_toStartOf="@id/name_text_view"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/username_edit_text"
@@ -68,11 +68,11 @@
         <TextView
             android:id="@+id/bio_text_view"
             style="@style/TextAppearance.Material3.BodyLarge"
+            android:text="@{viewModel.profile.bio}"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/extra_space_margin"
             android:textSize="@dimen/main_content_text_size"
-            android:visibility="invisible"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/profile_pic_image_view"
