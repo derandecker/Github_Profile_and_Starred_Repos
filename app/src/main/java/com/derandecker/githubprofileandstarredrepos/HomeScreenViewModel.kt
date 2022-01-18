@@ -6,6 +6,7 @@ import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.viewModelScope
 import com.derandecker.githubprofileandstarredrepos.database.getDatabase
+import com.derandecker.githubprofileandstarredrepos.repository.ProfileRepository
 import kotlinx.coroutines.launch
 import java.lang.Exception
 

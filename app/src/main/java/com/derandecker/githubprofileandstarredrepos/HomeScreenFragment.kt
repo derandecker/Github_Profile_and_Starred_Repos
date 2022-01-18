@@ -6,11 +6,16 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import androidx.lifecycle.ViewModelProvider
 import com.derandecker.githubprofileandstarredrepos.databinding.FragmentHomeScreenBinding
 
 class HomeScreenFragment : Fragment() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
+
+    private val viewModel: HomeScreenViewModel by lazy {
+        ViewModelProvider(
+            this,
+            HomeScreenViewModelFactory(requireActivity().application)
+        ).get(HomeScreenViewModel::class.java)
     }
 
     override fun onCreateView(
@@ -20,6 +25,9 @@ class HomeScreenFragment : Fragment() {
         val binding: FragmentHomeScreenBinding =
             DataBindingUtil.inflate(inflater, R.layout.fragment_home_screen,
             container, false)
+
+        binding.lifecycleOwner = viewLifecycleOwner
+        binding.viewModel = viewModel
         return binding.root
     }
 }

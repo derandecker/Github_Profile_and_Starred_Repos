@@ -1,5 +1,6 @@
 package com.derandecker.githubprofileandstarredrepos.database
 
+import androidx.lifecycle.LiveData
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
@@ -12,7 +13,7 @@ interface GithubDatabaseDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun insertProfile(vararg profile: GithubProfile)
 
-    @Query("SELECT * FROM githubprofile WHERE id = :id")
-    fun getSelectedProfile(id: Long): GithubProfile
+    @Query("SELECT * FROM githubprofile WHERE login = :login")
+    fun getSelectedProfile(login: String): LiveData<GithubProfile>
     
 }

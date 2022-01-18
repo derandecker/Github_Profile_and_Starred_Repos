@@ -10,6 +10,6 @@ data class GithubProfile constructor(
     val login: String,
     val name: String,
     val bio: String,
-    val avatarUrl: String,
+    val avatar_url: String,
 
-)
+    )

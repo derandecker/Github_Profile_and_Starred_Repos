@@ -16,9 +16,11 @@ private lateinit var INSTANCE: GithubDatabase
 fun getDatabase(context: Context): GithubDatabase {
     synchronized(GithubDatabase::class.java) {
         if (!::INSTANCE.isInitialized) {
-            INSTANCE = Room.databaseBuilder(context.applicationContext,
+            INSTANCE = Room.databaseBuilder(
+                context.applicationContext,
                 GithubDatabase::class.java,
-                "profiles").build()
+                "profiles"
+            ).build()
         }
     }
     return INSTANCE

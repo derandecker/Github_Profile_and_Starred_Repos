@@ -45,7 +45,7 @@
             android:layout_height="@dimen/profile_image_height"
             android:layout_marginTop="32dp"
             android:contentDescription="@string/github_profile_picture_content_description"
-            android:visibility="invisible"
+
             app:layout_constraintEnd_toStartOf="@id/name_text_view"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/username_edit_text"
@@ -55,10 +55,10 @@
         <TextView
             android:id="@+id/name_text_view"
             style="@style/TextAppearance.Material3.HeadlineMedium"
+            android:text="@{viewModel.profile.name}"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/default_margin"
-            android:visibility="invisible"
             app:layout_constraintBottom_toBottomOf="@id/profile_pic_image_view"
             app:layout_constraintStart_toEndOf="@id/profile_pic_image_view"
             app:layout_constraintTop_toTopOf="@id/profile_pic_image_view"
@@ -83,6 +83,8 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <data>
-
+        <variable
+            name="viewModel"
+            type="com.derandecker.githubprofileandstarredrepos.HomeScreenViewModel" />
     </data>
 </layout>
