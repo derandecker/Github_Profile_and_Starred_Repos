@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/navigation"
+    app:startDestination="@id/homeScreenFragment">
+
+    <fragment
+        android:id="@+id/homeScreenFragment"
+        android:name="com.derandecker.githubprofileandstarredrepos.HomeScreenFragment"
+        android:label="HomeScreenFragment" >
+        <action
+            android:id="@+id/action_homeScreenFragment_to_starredReposFragment"
+            app:destination="@id/starredReposFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/starredReposFragment"
+        android:name="com.derandecker.githubprofileandstarredrepos.StarredReposFragment"
+        android:label="StarredReposFragment" >
+        <action
+            android:id="@+id/action_starredReposFragment_to_individualStarredRepoFragment"
+            app:destination="@id/individualStarredRepoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/individualStarredRepoFragment"
+        android:name="com.derandecker.githubprofileandstarredrepos.IndividualStarredRepoFragment"
+        android:label="IndividualStarredRepoFragment" />
+</navigation>
