@@ -4,5 +4,6 @@
     <dimen name="profile_image_width">30dp</dimen>
     <dimen name="profile_image_height">30dp</dimen>
     <dimen name="extra_space_margin">16dp</dimen>
-    <dimen name="bio_text_size">22sp</dimen>
+    <dimen name="main_content_text_size">22sp</dimen>
+    <dimen name="space_dimension">4dp</dimen>
 </resources>

@@ -3,5 +3,9 @@
     <string name="username">username</string>
     <string name="submit_button">Submit</string>
     <string name="github_profile_picture_content_description">GitHub Profile Picture</string>
-    <string name="show_repos_button">Show Repos</string>
+    <string name="show_repos_button">Show Starred Repos</string>
+    <string name="repo_owner_profile_picture">Repo Owner Profile Picture</string>
+    <string name="stars">stars</string>
+    <string name="watchers">watchers</string>
+    <string name="forks">forks</string>
 </resources>
