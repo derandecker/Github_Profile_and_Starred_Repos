@@ -26,10 +26,10 @@ class HomeScreenViewModel(application: Application) : AndroidViewModel(applicati
         viewModelScope.launch {
             try {
                 profileRepository.downloadProfile(username)
-                updateProfile(username)
             } catch (e: Exception) {
                 Log.e("VIEWMODELSCOPE", "Error retrieving GitHub profile")
             }
+            updateProfile(username)
         }
 
     }
