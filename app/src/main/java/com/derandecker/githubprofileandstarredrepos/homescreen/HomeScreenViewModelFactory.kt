@@ -1,4 +1,4 @@
-package com.derandecker.githubprofileandstarredrepos
+package com.derandecker.githubprofileandstarredrepos.homescreen
 
 import android.app.Application
 import androidx.lifecycle.ViewModel

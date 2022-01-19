@@ -45,20 +45,20 @@
             android:layout_height="@dimen/profile_image_height"
             android:layout_marginTop="32dp"
             android:contentDescription="@string/github_profile_picture_content_description"
-            app:profileImage="@{viewModel.profile.avatar_url}"
             app:layout_constraintEnd_toStartOf="@id/name_text_view"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/username_edit_text"
+            app:profileImage="@{viewModel.profile.avatar_url}"
             tools:src="@drawable/deran_github_profile_pic"
             tools:visibility="visible" />
 
         <TextView
             android:id="@+id/name_text_view"
             style="@style/TextAppearance.Material3.HeadlineMedium"
-            android:text="@{viewModel.profile.name}"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/default_margin"
+            android:text="@{viewModel.profile.name}"
             app:layout_constraintBottom_toBottomOf="@id/profile_pic_image_view"
             app:layout_constraintStart_toEndOf="@id/profile_pic_image_view"
             app:layout_constraintTop_toTopOf="@id/profile_pic_image_view"
@@ -68,10 +68,10 @@
         <TextView
             android:id="@+id/bio_text_view"
             style="@style/TextAppearance.Material3.BodyLarge"
-            android:text="@{viewModel.profile.bio}"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/extra_space_margin"
+            android:text="@{viewModel.profile.bio}"
             android:textSize="@dimen/main_content_text_size"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -83,8 +83,9 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <data>
+
         <variable
             name="viewModel"
-            type="com.derandecker.githubprofileandstarredrepos.HomeScreenViewModel" />
+            type="com.derandecker.githubprofileandstarredrepos.homescreen.HomeScreenViewModel" />
     </data>
 </layout>

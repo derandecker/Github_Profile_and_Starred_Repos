@@ -1,7 +1,6 @@
 package com.derandecker.githubprofileandstarredrepos.repository
 
 import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
 import com.derandecker.githubprofileandstarredrepos.GithubProfile
 import com.derandecker.githubprofileandstarredrepos.database.GithubDatabase
 import com.derandecker.githubprofileandstarredrepos.network.Network

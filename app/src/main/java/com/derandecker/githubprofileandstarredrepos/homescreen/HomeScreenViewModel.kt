@@ -1,8 +1,9 @@
-package com.derandecker.githubprofileandstarredrepos
+package com.derandecker.githubprofileandstarredrepos.homescreen
 
 import android.app.Application
 import android.util.Log
 import androidx.lifecycle.*
+import com.derandecker.githubprofileandstarredrepos.GithubProfile
 import com.derandecker.githubprofileandstarredrepos.database.getDatabase
 import com.derandecker.githubprofileandstarredrepos.repository.ProfileRepository
 import kotlinx.coroutines.launch
@@ -22,14 +23,14 @@ class HomeScreenViewModel(application: Application) : AndroidViewModel(applicati
 
     private fun updateProfile(profileUsername: String) = apply { query.value = profileUsername }
 
-    fun downloadProfile(username: String) {
+    fun downloadProfile(repoUsername: String) {
         viewModelScope.launch {
             try {
-                profileRepository.downloadProfile(username)
+                profileRepository.downloadProfile(repoUsername)
             } catch (e: Exception) {
                 Log.e("VIEWMODELSCOPE", "Error retrieving GitHub profile")
             }
-            updateProfile(username)
+            updateProfile(repoUsername)
         }
 
     }

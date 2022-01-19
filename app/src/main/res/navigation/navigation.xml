@@ -6,7 +6,7 @@
 
     <fragment
         android:id="@+id/homeScreenFragment"
-        android:name="com.derandecker.githubprofileandstarredrepos.HomeScreenFragment"
+        android:name="com.derandecker.githubprofileandstarredrepos.homescreen.HomeScreenFragment"
         android:label="HomeScreenFragment" >
         <action
             android:id="@+id/action_homeScreenFragment_to_starredReposFragment"
@@ -19,6 +19,9 @@
         <action
             android:id="@+id/action_starredReposFragment_to_individualStarredRepoFragment"
             app:destination="@id/individualStarredRepoFragment" />
+        <argument
+            android:name="username"
+            app:argType="string" />
     </fragment>
     <fragment
         android:id="@+id/individualStarredRepoFragment"
