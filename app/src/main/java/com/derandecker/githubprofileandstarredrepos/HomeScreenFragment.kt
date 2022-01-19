@@ -35,12 +35,8 @@ class HomeScreenFragment : Fragment() {
 
         binding.submitButton.setOnClickListener {
             viewModel.downloadProfile(binding.usernameEditText.text.toString())
+            binding.showReposButton.visibility = View.VISIBLE
         }
-
-//        viewModel.profile.observe(viewLifecycleOwner, Observer {
-//            viewModel.updateProfile(binding.usernameEditText.text.toString())
-//        })
-
 
             return binding.root
     }

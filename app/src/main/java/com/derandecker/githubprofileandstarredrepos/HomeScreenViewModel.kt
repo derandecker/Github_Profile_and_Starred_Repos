@@ -20,7 +20,7 @@ class HomeScreenViewModel(application: Application) : AndroidViewModel(applicati
 
     private fun temp(username: String) = profileRepository.getProfile(username)
 
-    fun updateProfile(profileUsername: String) = apply { query.value = profileUsername }
+    private fun updateProfile(profileUsername: String) = apply { query.value = profileUsername }
 
     fun downloadProfile(username: String) {
         viewModelScope.launch {
