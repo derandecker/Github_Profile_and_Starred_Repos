@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.derandecker.githubprofileandstarredrepos.databinding.FragmentHomeScreenBinding
 
@@ -24,17 +25,23 @@ class HomeScreenFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val binding: FragmentHomeScreenBinding =
-            DataBindingUtil.inflate(inflater, R.layout.fragment_home_screen,
-            container, false)
-
-        binding.submitButton.setOnClickListener {
-            viewModel.downloadProfile()
-        }
-
-
+            DataBindingUtil.inflate(
+                inflater, R.layout.fragment_home_screen,
+                container, false
+            )
 
         binding.lifecycleOwner = viewLifecycleOwner
         binding.viewModel = viewModel
-        return binding.root
+
+        binding.submitButton.setOnClickListener {
+            viewModel.downloadProfile(binding.usernameEditText.text.toString())
+        }
+
+//        viewModel.profile.observe(viewLifecycleOwner, Observer {
+//            viewModel.updateProfile(binding.usernameEditText.text.toString())
+//        })
+
+
+            return binding.root
     }
 }

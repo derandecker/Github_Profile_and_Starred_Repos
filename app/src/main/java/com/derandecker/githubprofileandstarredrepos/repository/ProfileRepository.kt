@@ -10,9 +10,11 @@ import kotlinx.coroutines.withContext
 
 class ProfileRepository(private val database: GithubDatabase) {
 
-    //TODO pass in username instead of hardcoding
-    val profile: LiveData<GithubProfile> =
-        database.githubDao.getSelectedProfile("derandecker")
+
+    fun getProfile(profileUsername: String): LiveData<GithubProfile> {
+        return database.githubDao.getSelectedProfile(profileUsername)
+    }
+
 
     suspend fun downloadProfile(username: String) {
         withContext(Dispatchers.IO) {
