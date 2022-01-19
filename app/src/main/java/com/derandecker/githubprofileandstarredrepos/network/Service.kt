@@ -30,8 +30,8 @@ private val moshi = Moshi.Builder()
 
 object Network {
     private val client = OkHttpClient.Builder()
-        .connectTimeout(1, TimeUnit.MINUTES)
-        .readTimeout(1, TimeUnit.MINUTES)
+//        .connectTimeout(1, TimeUnit.MINUTES) //debug purposes. Past issues with emulator timing
+//        .readTimeout(1, TimeUnit.MINUTES)    //out on network calls.
         .build()
 
     private val retrofitProfile = Retrofit.Builder()
@@ -40,5 +40,5 @@ object Network {
         .client(client)
         .build()
 
-    val profile = retrofitProfile.create(NetworkGithubService::class.java)
+    val profile: NetworkGithubService = retrofitProfile.create(NetworkGithubService::class.java)
 }

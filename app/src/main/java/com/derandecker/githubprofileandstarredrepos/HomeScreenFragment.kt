@@ -23,7 +23,7 @@ class HomeScreenFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         val binding: FragmentHomeScreenBinding =
             DataBindingUtil.inflate(
                 inflater, R.layout.fragment_home_screen,
@@ -38,6 +38,6 @@ class HomeScreenFragment : Fragment() {
             binding.showReposButton.visibility = View.VISIBLE
         }
 
-            return binding.root
+        return binding.root
     }
 }
