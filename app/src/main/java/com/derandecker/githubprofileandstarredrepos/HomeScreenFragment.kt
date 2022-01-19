@@ -1,6 +1,7 @@
 package com.derandecker.githubprofileandstarredrepos
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -25,6 +26,12 @@ class HomeScreenFragment : Fragment() {
         val binding: FragmentHomeScreenBinding =
             DataBindingUtil.inflate(inflater, R.layout.fragment_home_screen,
             container, false)
+
+        binding.submitButton.setOnClickListener {
+            viewModel.downloadProfile()
+        }
+
+
 
         binding.lifecycleOwner = viewLifecycleOwner
         binding.viewModel = viewModel

@@ -1,6 +1,7 @@
 package com.derandecker.githubprofileandstarredrepos.repository
 
 import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
 import com.derandecker.githubprofileandstarredrepos.GithubProfile
 import com.derandecker.githubprofileandstarredrepos.database.GithubDatabase
 import com.derandecker.githubprofileandstarredrepos.network.Network
@@ -13,10 +14,9 @@ class ProfileRepository(private val database: GithubDatabase) {
     val profile: LiveData<GithubProfile> =
         database.githubDao.getSelectedProfile("derandecker")
 
-    //TODO pass in username instead of hardcoding
-    suspend fun getProfile() {
+    suspend fun downloadProfile(username: String) {
         withContext(Dispatchers.IO) {
-            val profile = Network.profile.getUserProfile("derandecker")
+            val profile = Network.profile.getUserProfile(username)
             database.githubDao.insertProfile(profile)
         }
     }
