@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import com.derandecker.githubprofileandstarredrepos.R
 import com.derandecker.githubprofileandstarredrepos.databinding.FragmentIndividualStarredRepoBinding
+import com.derandecker.githubprofileandstarredrepos.starredrepos.StarredReposFragmentArgs
 
 
 class IndividualStarredRepoFragment : Fragment() {
@@ -23,6 +24,11 @@ class IndividualStarredRepoFragment : Fragment() {
         val binding: FragmentIndividualStarredRepoBinding =
             DataBindingUtil.inflate(inflater, R.layout.fragment_individual_starred_repo,
             container, false)
+
+        val fullname = IndividualStarredRepoFragmentArgs.fromBundle(requireArguments()).fullName
+
+//        viewModel.downloadIndividualStarredRepo(fullname)
+
         return binding.root
     }
 

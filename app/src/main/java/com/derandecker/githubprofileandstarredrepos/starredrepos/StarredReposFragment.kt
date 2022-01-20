@@ -26,21 +26,20 @@ class StarredReposFragment : Fragment() {
                 container, false
             )
 
+        val args = StarredReposFragmentArgs.fromBundle(requireArguments())
+
         val manager = LinearLayoutManager(context)
         binding.starredRepoRecyclerView.layoutManager = manager
 
         val viewModelAdapter = StarredReposRecyclerViewAdapter(StarredRepoListener { repo ->
             this.findNavController().navigate(
                 StarredReposFragmentDirections
-                    .actionStarredReposFragmentToIndividualStarredRepoFragment()
+                    .actionStarredReposFragmentToIndividualStarredRepoFragment(repo.full_name)
             )
         })
 
         binding.starredRepoRecyclerView.adapter = viewModelAdapter
 
-        val args = StarredReposFragmentArgs.fromBundle(
-            requireArguments()
-        )
 
         viewModel.downloadStarredRepos(args.username)
 

@@ -27,5 +27,9 @@
     <fragment
         android:id="@+id/individualStarredRepoFragment"
         android:name="com.derandecker.githubprofileandstarredrepos.individualstarredrepo.IndividualStarredRepoFragment"
-        android:label="IndividualStarredRepoFragment" />
+        android:label="IndividualStarredRepoFragment" >
+        <argument
+            android:name="full_name"
+            app:argType="string" />
+    </fragment>
 </navigation>
