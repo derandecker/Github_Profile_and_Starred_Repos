@@ -29,7 +29,6 @@
         android:name="com.derandecker.githubprofileandstarredrepos.individualstarredrepo.IndividualStarredRepoFragment"
         android:label="IndividualStarredRepoFragment" >
         <argument
-            android:name="full_name"
-            app:argType="string" />
+            android:name="full_name" />
     </fragment>
 </navigation>

@@ -1,5 +1,6 @@
 package com.derandecker.githubprofileandstarredrepos.starredrepos
 
+import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -17,7 +18,11 @@ class StarredReposViewModel : ViewModel() {
 
     fun downloadStarredRepos(username: String) {
         viewModelScope.launch{
-            _starredRepos.value = Network.profile.getStarredRepos(username)
+            try {
+                _starredRepos.value = Network.profile.getStarredRepos(username)
+            } catch (e: Exception) {
+                Log.e("VIEWMODELSCOPE", "Error retrieving Starred Repos")
+            }
         }
     }
 }

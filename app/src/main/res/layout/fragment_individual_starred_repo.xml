@@ -12,6 +12,7 @@
 
         <ImageView
             android:id="@+id/owner_pic_image_view"
+            app:profileImage="@{repo.owner.avatar_url}"
             android:layout_width="@dimen/profile_image_width"
             android:layout_height="@dimen/profile_image_height"
             android:contentDescription="@string/repo_owner_profile_picture"
@@ -21,6 +22,7 @@
 
         <TextView
             android:id="@+id/repo_owner_text_view"
+            android:text="@{repo.owner.login}"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="@dimen/main_content_text_size"
@@ -30,6 +32,7 @@
 
         <TextView
             android:id="@+id/repo_description_individual_text_view"
+            android:text="@{repo.description}"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/extra_space_margin"
@@ -43,6 +46,7 @@
         <TextView
             android:id="@+id/number_of_stars_text_view"
             style="@style/TextAppearance.Material3.HeadlineLarge"
+
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="@dimen/main_content_text_size"
@@ -66,7 +70,8 @@
 
         <TextView
             android:id="@+id/repo_name_individual_text_view"
-            style="@style/TextAppearance.Material3.HeadlineLarge"
+            style="@style/TextAppearance.Material3.HeadlineSmall"
+            android:text="@{repo.full_name}"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/default_margin"
@@ -79,6 +84,7 @@
         <TextView
             android:id="@+id/watchers_text_view"
             style="@style/TextAppearance.Material3.HeadlineLarge"
+
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/default_margin"
@@ -100,6 +106,7 @@
 
         <TextView
             android:id="@+id/forks_text_view"
+
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/default_margin"
@@ -122,6 +129,9 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <data>
+        <variable
+            name="repo"
+            type="com.derandecker.githubprofileandstarredrepos.model.IndividualStarredRepo" />
 
     </data>
 </layout>

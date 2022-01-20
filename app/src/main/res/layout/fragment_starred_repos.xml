@@ -2,10 +2,6 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <data>
-
-    </data>
-
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/starred_repo_recycler_view"
         android:layout_width="match_parent"

@@ -1,6 +1,7 @@
 package com.derandecker.githubprofileandstarredrepos.network
 
 import com.derandecker.githubprofileandstarredrepos.model.GithubProfile
+import com.derandecker.githubprofileandstarredrepos.model.IndividualStarredRepo
 import com.derandecker.githubprofileandstarredrepos.model.StarredRepo
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
@@ -20,10 +21,11 @@ interface NetworkGithubService {
     @GET("users/{gitHubUsername}/starred")
     suspend fun getStarredRepos(@Path("gitHubUsername") username: String): List<StarredRepo>
 
-/*    two more GET functions will be added
-      one for starred repos
-      one for the individual starred repo
-*/
+    @GET("repos/{owner}/{name}")
+    suspend fun getIndividualStarredRepo(
+        @Path("owner") owner: String,
+        @Path("name") name: String
+    ): IndividualStarredRepo
 
 }
 
@@ -33,8 +35,6 @@ private val moshi = Moshi.Builder()
 
 object Network {
     private val client = OkHttpClient.Builder()
-//        .connectTimeout(1, TimeUnit.MINUTES) //debug purposes. Past issues with emulator timing
-//        .readTimeout(1, TimeUnit.MINUTES)    //out on network calls.
         .build()
 
     private val retrofitProfile = Retrofit.Builder()
