@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigation"
     app:startDestination="@id/homeScreenFragment">
 
@@ -14,8 +15,8 @@
     </fragment>
     <fragment
         android:id="@+id/starredReposFragment"
-        android:name="com.derandecker.githubprofileandstarredrepos.StarredReposFragment"
-        android:label="StarredReposFragment" >
+        android:name="com.derandecker.githubprofileandstarredrepos.starredrepos.StarredReposFragment"
+        android:label="StarredReposFragment">
         <action
             android:id="@+id/action_starredReposFragment_to_individualStarredRepoFragment"
             app:destination="@id/individualStarredRepoFragment" />
@@ -25,6 +26,6 @@
     </fragment>
     <fragment
         android:id="@+id/individualStarredRepoFragment"
-        android:name="com.derandecker.githubprofileandstarredrepos.IndividualStarredRepoFragment"
+        android:name="com.derandecker.githubprofileandstarredrepos.individualstarredrepo.IndividualStarredRepoFragment"
         android:label="IndividualStarredRepoFragment" />
 </navigation>

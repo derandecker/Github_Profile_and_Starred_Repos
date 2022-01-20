@@ -1,4 +1,4 @@
-package com.derandecker.githubprofileandstarredrepos
+package com.derandecker.githubprofileandstarredrepos.individualstarredrepo
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -6,7 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
-import com.derandecker.githubprofileandstarredrepos.databinding.FragmentHomeScreenBinding
+import com.derandecker.githubprofileandstarredrepos.R
 import com.derandecker.githubprofileandstarredrepos.databinding.FragmentIndividualStarredRepoBinding
 
 
@@ -19,7 +19,7 @@ class IndividualStarredRepoFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         val binding: FragmentIndividualStarredRepoBinding =
             DataBindingUtil.inflate(inflater, R.layout.fragment_individual_starred_repo,
             container, false)

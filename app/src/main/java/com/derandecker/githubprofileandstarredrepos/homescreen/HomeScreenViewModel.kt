@@ -3,7 +3,7 @@ package com.derandecker.githubprofileandstarredrepos.homescreen
 import android.app.Application
 import android.util.Log
 import androidx.lifecycle.*
-import com.derandecker.githubprofileandstarredrepos.GithubProfile
+import com.derandecker.githubprofileandstarredrepos.model.GithubProfile
 import com.derandecker.githubprofileandstarredrepos.database.getDatabase
 import com.derandecker.githubprofileandstarredrepos.repository.ProfileRepository
 import kotlinx.coroutines.launch

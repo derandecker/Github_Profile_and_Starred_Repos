@@ -1,6 +1,7 @@
 package com.derandecker.githubprofileandstarredrepos.network
 
-import com.derandecker.githubprofileandstarredrepos.GithubProfile
+import com.derandecker.githubprofileandstarredrepos.model.GithubProfile
+import com.derandecker.githubprofileandstarredrepos.model.StarredRepo
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import okhttp3.OkHttpClient
@@ -15,6 +16,9 @@ const val BASE_URL = "https://api.github.com"
 interface NetworkGithubService {
     @GET("users/{usernamePath}")
     suspend fun getUserProfile(@Path("usernamePath") username: String): GithubProfile
+
+    @GET("users/{gitHubUsername}/starred")
+    suspend fun getStarredRepos(@Path("gitHubUsername") username: String): List<StarredRepo>
 
 /*    two more GET functions will be added
       one for starred repos

@@ -5,7 +5,7 @@ import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
-import com.derandecker.githubprofileandstarredrepos.GithubProfile
+import com.derandecker.githubprofileandstarredrepos.model.GithubProfile
 
 @Dao
 interface GithubDatabaseDao {

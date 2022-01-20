@@ -1,7 +1,7 @@
 package com.derandecker.githubprofileandstarredrepos.repository
 
 import androidx.lifecycle.LiveData
-import com.derandecker.githubprofileandstarredrepos.GithubProfile
+import com.derandecker.githubprofileandstarredrepos.model.GithubProfile
 import com.derandecker.githubprofileandstarredrepos.database.GithubDatabase
 import com.derandecker.githubprofileandstarredrepos.network.Network
 import kotlinx.coroutines.Dispatchers

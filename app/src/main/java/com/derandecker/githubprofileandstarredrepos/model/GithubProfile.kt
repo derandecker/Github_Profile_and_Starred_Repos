@@ -1,4 +1,4 @@
-package com.derandecker.githubprofileandstarredrepos
+package com.derandecker.githubprofileandstarredrepos.model
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
