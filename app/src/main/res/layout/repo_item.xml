@@ -2,17 +2,27 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
+<data>
 
+    <variable
+        name="starredrepo"
+        type="com.derandecker.githubprofileandstarredrepos.model.StarredRepo" />
+
+    <variable
+        name="clickListener"
+        type="com.derandecker.githubprofileandstarredrepos.starredrepos.StarredRepoListener" />
+</data>
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/default_margin"
-        android:onClick="TODO"
+        android:onClick="@{() -> clickListener.onClick(starredrepo)}"
         >
 
         <TextView
             android:id="@+id/repo_name_text_view"
             style="@style/TextAppearance.Material3.HeadlineSmall"
+            android:text="@{starredrepo.full_name}"
             android:layout_marginTop="@dimen/default_margin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -23,6 +33,7 @@
         <TextView
             android:id="@+id/repo_description_text_view"
             style="@style/TextAppearance.Material3.BodyLarge"
+            android:text="@{starredrepo.description}"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintStart_toStartOf="parent"
