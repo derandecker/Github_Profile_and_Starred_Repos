@@ -38,7 +38,7 @@ class StarredReposFragment : Fragment() {
 
         viewModel.starredRepos.observe(viewLifecycleOwner, { repo ->
             repo?.forEach{
-                Log.d("FOREACHREPO", it.full_name)
+                it.full_name?.let { it1 -> Log.d("FOREACHREPO", it1) }
             }
         })
 

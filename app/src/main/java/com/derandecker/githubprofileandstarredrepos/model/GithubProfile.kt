@@ -8,8 +8,8 @@ data class GithubProfile constructor(
     @PrimaryKey
     val id: Long,
     val login: String,
-    val name: String,
-    val bio: String,
-    val avatar_url: String,
+    val name: String? = "",
+    val bio: String? = "",
+    val avatar_url: String? = "",
 
     )
