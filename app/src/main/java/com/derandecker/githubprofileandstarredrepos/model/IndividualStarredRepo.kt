@@ -13,6 +13,6 @@ data class IndividualStarredRepo constructor(
     )
 
 data class RepoOwner constructor(
-    val login: String,   //might need to reconfigure this so moshi sees it under the owner/login tag
-    val avatar_url: String, //might need to reconfigure this so moshi sees it under the owner/login tag
+    val login: String,
+    val avatar_url: String,
 )
